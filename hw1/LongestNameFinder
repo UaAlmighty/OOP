@@ -15,7 +15,7 @@ public class LongestNameFinder {
     }
 }
 ======================
-// Код скопирован для удобства. Он написан отдельным классом, есть в папке hw1
+// Код скопирован для удобства проверки. Он написан отдельным классом, есть в папке hw1
 //NameLongerFounder.nameLongerFounder(names); 
 
 package hw1.done;
@@ -37,6 +37,7 @@ public class NameLongerFounder {
     }
 }
 ======================
+// Код скопирован для удобства проверки. Он написан отдельным классом, есть в папке hw1
 // IsArraysNamesEmpty.isArraysNamesEmpty(names);
 package hw1.done;
 
