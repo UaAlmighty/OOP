@@ -1,0 +1,17 @@
+package hw1.done;
+//Написать метод, находящий все имена, начинающиеся с буквы startLetter, в списке имен.
+//        Использовать цикл for-each.
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class NamesWithStartLetter {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>(Arrays.asList("Phil", "Anny", "Aaron", "Bob"));
+        char startLetter = 'A';
+        FounderStartNamesChar.namesWithStartLetter(new ArrayList<>(names), 'A');
+        // класа  и тд.
+
+        System.out.println(FounderStartNamesChar.namesWithStartLetter(new ArrayList<>(names), 'A'));
+    }
+}
