@@ -1,0 +1,15 @@
+package hw1.done;
+
+import java.util.ArrayList;
+
+public class FounderStartNamesChar {
+    public static ArrayList<String> namesWithStartLetter(ArrayList<String> names, char startLetter){
+        ArrayList<String> founderStartNamesChar = new ArrayList<>(){};
+        for(String name : names){
+            if(name.charAt(0)==startLetter){
+                founderStartNamesChar.add(name);
+            }
+        }
+        return founderStartNamesChar;
+    }
+}
