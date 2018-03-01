@@ -1,0 +1,18 @@
+package hw1.done;
+
+
+import java.util.ArrayList;
+
+public class NameLongerFounder {
+    public static String nameLongerFounder(ArrayList<String> names) {
+        IsArraysNamesEmpty.isArraysNamesEmpty(names);
+
+        String nameLongerFounder = "";
+        for (String name : names) {
+            if (name.length() > nameLongerFounder.length()) {
+                nameLongerFounder = name;
+            }
+        }
+        return nameLongerFounder;
+    }
+}
