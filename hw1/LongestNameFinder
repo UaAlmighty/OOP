@@ -10,7 +10,42 @@ import java.util.Arrays;
 public class LongestNameFinder {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>(Arrays.asList("Phil", "Anny", "Richard", "Chris"));
-        NameLongerFounder.nameLongerFounder(names);
+        NameLongerFounder.nameLongerFounder(names); // Код ниже
         System.out.println(NameLongerFounder.nameLongerFounder(names));
+    }
+}
+======================
+// Код скопирован для удобства. Он написан отдельным классом, есть в папке hw1
+//NameLongerFounder.nameLongerFounder(names); 
+
+package hw1.done;
+
+
+import java.util.ArrayList;
+
+public class NameLongerFounder {
+    public static String nameLongerFounder(ArrayList<String> names) {
+        IsArraysNamesEmpty.isArraysNamesEmpty(names); //код ниже
+
+        String nameLongerFounder = "";
+        for (String name : names) {
+            if (name.length() > nameLongerFounder.length()) {
+                nameLongerFounder = name;
+            }
+        }
+        return nameLongerFounder;
+    }
+}
+======================
+// IsArraysNamesEmpty.isArraysNamesEmpty(names);
+package hw1.done;
+
+import java.util.ArrayList;
+
+public class IsArraysNamesEmpty {
+    public static void isArraysNamesEmpty(ArrayList<String> names){
+        if(names.isEmpty()){
+            throw new IllegalArgumentException("Array is empty");
+        }
     }
 }
