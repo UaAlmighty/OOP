@@ -9,9 +9,27 @@ public class NamesWithStartLetter {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>(Arrays.asList("Phil", "Anny", "Aaron", "Bob"));
         char startLetter = 'A';
-        FounderStartNamesChar.namesWithStartLetter(new ArrayList<>(names), 'A');
+        FounderStartNamesChar.namesWithStartLetter(new ArrayList<>(names), 'A'); // Код ниже
         // класа  и тд.
 
         System.out.println(FounderStartNamesChar.namesWithStartLetter(new ArrayList<>(names), 'A'));
+    }
+}
+======================
+// Код скопирован для удобства проверки. Он написан отдельным классом, есть в папке hw1
+// FounderStartNamesChar
+package hw1.done;
+
+import java.util.ArrayList;
+
+public class FounderStartNamesChar {
+    public static ArrayList<String> namesWithStartLetter(ArrayList<String> names, char startLetter){
+        ArrayList<String> founderStartNamesChar = new ArrayList<>(){};
+        for(String name : names){
+            if(name.charAt(0)==startLetter){
+                founderStartNamesChar.add(name);
+            }
+        }
+        return founderStartNamesChar;
     }
 }
