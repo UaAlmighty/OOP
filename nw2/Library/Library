@@ -1,0 +1,48 @@
+package OOP.HW2.Menu.Library;
+
+import java.util.ArrayList;
+
+public class Library {
+    private final ArrayList<Book> booklist = new ArrayList<>();
+
+    public void addBook(Book book){
+        this.booklist.add(book);
+    }
+    public ArrayList avtorFinder(String avtor){
+        ArrayList<Book> avtorsbook = new ArrayList<>();
+        for(Book book:booklist){
+            if (book.getAvtor().equalsIgnoreCase(avtor)){
+                avtorsbook.add(book);
+            }
+        }
+        return avtorsbook;
+    }
+
+    public ArrayList isdatelFinder(String isdatel){
+        ArrayList<Book> isdatelbooks = new ArrayList<>();
+        for (Book bookisdatel : booklist ){
+            if (bookisdatel.getIsdatel().equals(isdatel)){
+                isdatelbooks.add(bookisdatel);
+            }
+        }
+        return isdatelbooks;
+    }
+
+    public ArrayList searchBooksAfterGivenYear(int yearpublish){
+        ArrayList<Book> booksAfterYear = new ArrayList<>();
+
+        for(Book year : booklist){
+            if(year.getYearpublish() >= yearpublish){
+                booksAfterYear.add(year);
+            }
+        }
+        return booksAfterYear;
+    }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "booklist=" + booklist +
+                '}';
+    }
+}
