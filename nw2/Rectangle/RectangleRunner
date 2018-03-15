@@ -1,0 +1,17 @@
+package OOP.HW2.Menu.Rectangle;
+
+public class RectangleRunner {
+    public static void main(String[] args) {
+        Rectangle rectangle1 = new Rectangle(10,20);
+        Rectangle rectangle2 = new Rectangle(8,10);
+
+        Rectangles rectangles1 = new Rectangles();
+        rectangles1.addRectangle(rectangle1);
+        rectangles1.addRectangle(rectangle2);
+
+        System.out.println("Площадь одного прямоугольник: " + rectangle1.Area());
+        System.out.println("Периметр одного прямоугольника: " + rectangle1.Perimatr());
+        System.out.println("Площадь всех прямоугольников: " + rectangles1.SumRectanglesArea());
+
+    }
+}
