@@ -1,0 +1,28 @@
+package OOP.HW2.Menu;
+
+public class MenuRunner {
+    public static void main(String[] args) {
+        Dish dish1 = new Dish("Lunc", "Bread, pasta, soup", 50);
+        Dish dish2 = new Dish("Supper", "egges, chees, salad", 55);
+        Dish dish3  = new Dish("Just vage", "tomato, cucumber, vage soup", 60);
+
+        Menu menu1 = new Menu("First menu");
+        menu1.addDish(dish1);
+        menu1.addDish(dish2);
+
+        Dish dish11 = new Dish("Papa lunc", "Palmani, vodka, kysochek hlebywka", 25);
+        Dish dish12 = new Dish("Burger menu", "burger, free, koca", -10);
+        Dish dish13 = new Dish("Dasert menu", " icescreem, kockes, tea", 40);
+        Menu menu2 = new Menu("Menu 2");
+        menu2.addDish(dish11);
+        menu2.addDish(dish12);
+        menu2.addDish(dish13);
+
+
+
+        System.out.println("Вывод одного блюда: " + dish1);
+        System.out.println("Вывод одного меню:  " + menu1);
+        System.out.println("В меню: "+ menu1.getName() + ". Самое дешовое блюдо: " + menu1.getCheapestDish().toString());
+        System.out.println("В меню: " + menu2.getName() + ". Самое дешовое блюдо: " + menu2.getCheapestDish().toString());
+    }
+}
