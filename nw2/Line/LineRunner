@@ -1,0 +1,27 @@
+package OOP.HW2.Menu.Line;
+
+public class LineRunner {
+    public static void main(String[] args) {
+        Point point1 = new Point(2, 2);
+        Point point2 = new Point(3, 4);
+        Line line1 = new Line(point1,point2);
+
+        Point point11 = new Point(2, 4);
+        Point point12 = new Point(1, 4);
+        Line line2 = new Line(point11, point12);
+
+        Point point33 = new Point(2,6);
+        Point point34 = new Point(3,5);
+        Line line3 = new Line(point33, point34);
+
+        Lines lines1 = new Lines();
+        lines1.addLine(line1);
+        lines1.addLine(line2);
+        lines1.addLine(line3);
+
+        System.out.println("Координати первой точки: " + point1.toString());
+        System.out.println("Длина первой линии: " + line1.lineGounting());
+        System.out.println("Сумарная длина всех линий: " + lines1.linesLengthsum());
+        System.out.println("Самая длинная линия состоит из координат: "  + lines1.longersLine().toString());
+    }
+}
