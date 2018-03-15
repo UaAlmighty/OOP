@@ -1,0 +1,21 @@
+package OOP.HW4.Taxi;
+
+public class TaxiRunner {
+    public static void main(String[] args) {
+        Tariff standart = new StandardTariff();
+        Tariff family = new FamilyTariff();
+
+        Ride ride1 = new Ride(2, 50, 30, standart);
+        Ride ride2 = new Ride(3, 20, 50, family);
+
+        RidesHistory history = new RidesHistory();
+        history.addRide(ride1);
+        history.addRide(ride2);
+
+
+        System.out.println("Стоимость первой поездки: " + ride1.getPrice());
+        System.out.println("Все поездки клиента: " + history.toString());
+        System.out.println("Сумма всех поездок: " + history.getTotalPrice());
+
+    }
+}
