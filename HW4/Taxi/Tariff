@@ -1,0 +1,5 @@
+package OOP.HW4.Taxi;
+
+public interface Tariff {
+    long calculatePrice(Ride ride);
+}
