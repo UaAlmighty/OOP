@@ -1,0 +1,13 @@
+package OOP.HW4.Taxi;
+
+public class FamilyTariff implements Tariff{
+    public long calculatePrice(Ride ride){
+        long price = 50 + 20 * ride.getDistance()/ride.getPassengers();
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "FamilyTariff{}";
+    }
+}
