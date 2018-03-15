@@ -1,0 +1,37 @@
+package OOP.HW2.Menu.Line;
+
+import java.util.ArrayList;
+
+public class Lines {
+    private final ArrayList<Line> lines = new ArrayList<>();
+
+    public void  addLine(Line line){
+        lines.add(line);
+    }
+    public double linesLengthsum (){
+        if(lines.isEmpty()){
+            throw new IllegalArgumentException("Lines is empty");
+        }
+        double allLengtSum = 0.0;
+        for( Line line: lines){
+            allLengtSum += line.lineGounting();
+        }
+        return allLengtSum;
+    }
+    public Line longersLine(){
+                Line isLongersLine = lines.get(0);
+        for(Line line : lines){
+            if (line.lineGounting()>isLongersLine.lineGounting()){
+                isLongersLine = line;
+            }
+        }
+        return isLongersLine;
+    }
+
+
+    public String toString() {
+        return "Lines{" +
+                "lines=" + lines +
+                '}';
+    }
+}
