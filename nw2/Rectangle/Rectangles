@@ -1,0 +1,29 @@
+package OOP.HW2.Menu.Rectangle;
+
+import java.util.ArrayList;
+
+public class Rectangles {
+    private final ArrayList<Rectangle> rectangles = new ArrayList<>();
+
+    public void addRectangle(Rectangle rectangle) {
+        rectangles.add(rectangle);
+    }
+
+    public double SumRectanglesArea() {
+        if (rectangles.isEmpty()) {
+            throw new IllegalArgumentException("Rectangles is Empty");
+        }
+        double allRectanglesArea = 0.0;
+        for (Rectangle rectangle : rectangles) {
+            allRectanglesArea += rectangle.Area();
+        }
+        return allRectanglesArea;
+    }
+
+
+    public String toString() {
+        return "Rectangles{" +
+                "rectangles=" + rectangles +
+                '}';
+    }
+}
