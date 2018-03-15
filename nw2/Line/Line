@@ -1,0 +1,23 @@
+package OOP.HW2.Menu.Line;
+
+public class Line {
+    private final Point starPoint;
+    private final Point endPoint;
+
+    public Line(Point starPoint, Point endPoint) {
+        this.starPoint = starPoint;
+        this.endPoint = endPoint;
+    }
+    public double lineGounting(){
+        double lineLength = Math.sqrt(Math.pow((endPoint.getX() - starPoint.getX()), 2)) + (Math.pow((endPoint.getY() - endPoint.getY()), 2));
+        return lineLength;
+    }
+
+    @Override
+    public String toString() {
+        return "Line{" +
+                "starPoint=" + starPoint +
+                ", endPoint=" + endPoint +
+                '}';
+    }
+}
