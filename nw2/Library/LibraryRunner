@@ -1,0 +1,18 @@
+package OOP.HW2.Menu.Library;
+
+public class LibraryRunner {
+    public static void main(String[] args) {
+        Book book1 = new Book("Думай и богатей", "Наполеон Хилл", "UABOOk", 2008, 378, 120, "HARD COVER");
+        Book book2 = new Book("Война и мир", "Лев Толстой", "NEW Isdatel", 1950, 750, 150, "Light cover");
+        Book book3 = new Book("Великий Гэтсби", "Фрэнсис Скотт Фитцджеральд", "Rus Book", 1870, 600, 100, "HARD COVER");
+
+        Library library1 = new Library();
+        library1.addBook(book1);
+        library1.addBook(book2);
+        library1.addBook(book3);
+
+        System.out.println(library1.avtorFinder("Лев Толстой"));
+        System.out.println(library1.isdatelFinder("Rus Book"));
+        System.out.println(library1.searchBooksAfterGivenYear(2000));
+    }
+}
