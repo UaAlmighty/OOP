@@ -1,0 +1,39 @@
+package OOP.HW2.Menu;
+
+public class Dish {
+    private final String name;
+    private final String description;
+    private final long prise;
+
+    public Dish(String name, String description, long prise) {
+        this.name = name;
+        this.description = description;
+        this.prise = prise;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public long getPrise() {
+        if (prise < 0) {
+            throw new IllegalArgumentException("Prise cannot be minus");
+        }
+        return prise;
+    }
+
+    public void isPriceMinus() {
+    }
+
+    public String toString() {
+        return "Dish{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", ptise=" + prise +
+                '}';
+    }
+}
