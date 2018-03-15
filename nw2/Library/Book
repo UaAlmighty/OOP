@@ -1,0 +1,62 @@
+package OOP.HW2.Menu.Library;
+
+public class Book {
+    private final String name;
+    private final String avtor;
+    private final String isdatel;
+    private final int yearpublish;
+    private final int pages;
+    private final long price;
+    private final String bookbinding;
+
+    public Book(String name, String avtor, String isdatel, int yearpublish, int pages, long price, String bookbinding) {
+        this.name = name;
+        this.avtor = avtor;
+        this.isdatel = isdatel;
+        this.yearpublish = yearpublish;
+        this.pages = pages;
+        this.price = price;
+        this.bookbinding = bookbinding;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAvtor() {
+        return avtor;
+    }
+
+    public String getIsdatel() {
+        return isdatel;
+    }
+
+    public int getYearpublish() {
+        return yearpublish;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public long getPrice() {
+        return price;
+    }
+
+    public String getBookbinding() {
+        return bookbinding;
+    }
+
+
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", avtor='" + avtor + '\'' +
+                ", isdatel='" + isdatel + '\'' +
+                ", yearpublish=" + yearpublish +
+                ", pages=" + pages +
+                ", price=" + price +
+                ", bookbinding='" + bookbinding + '\'' +
+                '}';
+    }
+}
