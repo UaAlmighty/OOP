@@ -1,0 +1,30 @@
+package HWLesson3.MusicApp;
+
+public class MusicRunner {
+    public static void main(String[] args) {
+        AudioContent audioContent = new AudioContent(new byte[] {1, 2, 3});
+        Song song1 = new Song("Tralala", "Yura", "POP", 120, audioContent);
+        Song song2 = new Song("Best fiends","fiends corp","Hip-Hop", 270, audioContent);
+        Song song3 = new Song("Mama help", "Mama music", "Hip-Hop", 180, audioContent);
+
+        Song song11= new Song("Black bacardi","Black","POP", 240,audioContent);
+        Song song12 = new Song("Tvoi glaza", "Loboda","POP", 280, audioContent);
+        Song song13 = new Song("Revolusion", "Deep Mode", "Hip-Hop", 250 , audioContent);
+
+        Playlist playlist1 = new Playlist("Hip-Hop");
+        playlist1.addSong(song1);
+        playlist1.addSong(song2);
+        playlist1.addSong(song3);
+
+        User user1 = new User("MusicLover");
+        user1.addPlaylist(playlist1);
+        user1.createPlayList("My Best");
+        user1.addSongToPlaylist("My Best", song11);
+        user1.addSongToPlaylist("My Best", song12);
+        user1.addSongToPlaylist("My Best", song13);
+
+
+        System.out.println(user1.findByTitle("My Best"));
+        System.out.println(playlist1.toString());
+    }
+}
