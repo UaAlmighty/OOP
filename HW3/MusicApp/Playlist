@@ -1,0 +1,57 @@
+package HWLesson3.MusicApp;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Playlist {
+    private final String titile;
+    private final List<Song> songs = new ArrayList<>();
+
+    public Playlist(String titile) {
+        this.titile = titile;
+    }
+
+    public String getTitile() {
+        return titile;
+    }
+
+    public void addSong(Song song) {
+        songs.add(song);
+    }
+
+    public long getTotalLegth() {
+        long totalLeght = 0;
+        for (Song leght : songs) {
+            totalLeght += leght.getLength();
+        }
+        return totalLeght;
+    }
+
+    public ArrayList<Song> findbyTitlePart(String titile) {
+        ArrayList<Song> titleFound = new ArrayList<>();
+        for (Song titles : songs) {
+            if (titles.getTitle().equalsIgnoreCase(titile)) {
+                titleFound.add(titles);
+            }
+        }
+        return titleFound;
+    }
+
+    public ArrayList<Song> findByAuthor(String authot) {
+        ArrayList<Song> authorFinder = new ArrayList<>();
+        for (Song songAuthor : songs) {
+            if (songAuthor.getAuthot().equalsIgnoreCase(authot)) {
+                authorFinder.add(songAuthor);
+            }
+        }
+        return authorFinder;
+    }
+
+    @Override
+    public String toString() {
+        return "Playlist{" +
+                "titile='" + titile + '\'' +
+                ", songs=" + songs +
+                '}';
+    }
+}
